@@ -1,17 +1,11 @@
-#include <MD_Parola.h>
-#include <MD_MAX72XX.h>
-#include <SPI.h>
 #include <LedControl.h>
 #include <LiquidCrystal.h>
 #include <OneButton.h>
 
-#define HARDWARE_TYPE MD_MAX72XX::FC16_HW
-#define MAX_DEVICES 1
 
-#define DATA_PIN 12
-#define CLK_PIN 10
-#define CS_PIN 11
-#define IR_PIN 2
+#define DATA 12
+#define CLK 10
+#define CS 11
 
 #define rs 7
 #define en A2
