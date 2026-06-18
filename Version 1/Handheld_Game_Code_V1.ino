@@ -26,7 +26,7 @@ int s00 = 0; int s03 = 0; int s06 = 0;
 int s30 = 0; int s33 = 0; int s36 = 0;
 int s60 = 0; int s63 = 0; int s66 = 0;
 
-LedControl lcd(DATA_PIN, CLK_PIN, CS_PIN, 1);
+LedControl lcd(DATA, CLK, CS, 1);
 
 int r = 0;
 int c = 0;
