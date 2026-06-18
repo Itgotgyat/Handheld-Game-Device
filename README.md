@@ -16,9 +16,9 @@ A compact handheld gaming device with integrated games and a full menu system.
  
 ## Libraries Used
 
-* 'OneButton': Used for debouncing buttons and handling button presses such as long presses and double presses.
-* 'LedControl': Used for controlling and customizing the MAX7219 8x8 Matrix Display.
-* 'LiquidCrystal': Used for displaying text and customizing it on the 16x2 character LCD.
+* `OneButton`: Used for debouncing buttons and handling button presses such as long presses and double presses.
+* `LedControl`: Used for controlling and customizing the MAX7219 8x8 Matrix Display.
+* `LiquidCrystal`: Used for displaying text and customizing it on the 16x2 character LCD.
 
 ## How to Play
 
