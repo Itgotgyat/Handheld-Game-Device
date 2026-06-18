@@ -52,28 +52,57 @@ OneButton bDown(A5, true);
 void Quit();
 
 int getCurrentSlotOwner() {
-  if (r == 0 && c == 0) return s00;
-  if (r == 0 && c == 3) return s03;
-  if (r == 0 && c == 6) return s06;
-  if (r == 3 && c == 0) return s30;
-  if (r == 3 && c == 3) return s33;
-  if (r == 3 && c == 6) return s36;
-  if (r == 6 && c == 0) return s60;
-  if (r == 6 && c == 3) return s63;
-  if (r == 6 && c == 6) return s66;
+  if (r == 0 && c == 0) 
+    return s00;
+  if (r == 0 && c == 3) 
+    return s03;
+  
+  if (r == 0 && c == 6) 
+    return s06;
+  if (r == 3 && c == 0) 
+    return s30;
+  
+  if (r == 3 && c == 3) 
+    return s33;
+  
+  if (r == 3 && c == 6) 
+    return s36;
+  if (r == 6 && c == 0) 
+    return s60;
+  
+  if (r == 6 && c == 3) 
+    return s63;
+  if (r == 6 && c == 6) 
+    return s66;
+
+  
   return 0;
 }
 
 void setCurrentSlotOwner(int owner) {
-  if (r == 0 && c == 0) s00 = owner;
-  if (r == 0 && c == 3) s03 = owner;
-  if (r == 0 && c == 6) s06 = owner;
-  if (r == 3 && c == 0) s30 = owner;
-  if (r == 3 && c == 3) s33 = owner;
-  if (r == 3 && c == 6) s36 = owner;
-  if (r == 6 && c == 0) s60 = owner;
-  if (r == 6 && c == 3) s63 = owner;
-  if (r == 6 && c == 6) s66 = owner;
+  if (r == 0 && c == 0) 
+    s00 = owner;
+  if (r == 0 && c == 3)
+    s03 = owner;
+  if (r == 0 && c == 6) 
+    s06 = owner;
+  
+  if (r == 3 && c == 0) 
+    s30 = owner;
+  if (r == 3 && c == 3)
+    s33 = owner;
+
+  
+  if (r == 3 && c == 6) 
+    s36 = owner;
+  
+  if (r == 6 && c == 0) 
+    s60 = owner;
+  
+  if (r == 6 && c == 3) 
+    s63 = owner;
+  if (r == 6 && c == 6)
+    s66 = owner;
 }
 
 void clear() {
