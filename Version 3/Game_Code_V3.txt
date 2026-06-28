@@ -50,6 +50,10 @@ int velY = 0;
 int trial = 0;
 int brightness = 8;
 int first = 0;
+int foodX = 5;
+int foodY = 4;
+bool collision = true;
+
 
 int chance = 0;
 
@@ -313,6 +317,10 @@ void Quit() {
   trial = 0;
   velX = 1;
   velY = 0;
+  foodEaten = false;
+  collision = true;
+  foodX = 5; 
+  foodY = 4;
   lcd.clearDisplay(0);
   if(selectingSetting == true){
   lcd.clearDisplay(0);
@@ -321,6 +329,7 @@ void Quit() {
   }
   selectingSetting = false;
   delay(1000);
+  lcd.clearDisplay(0);
 
   
 }
@@ -397,6 +406,9 @@ void select() {
       selectingDiff = false;
       gaming2 = true;
       drawSnake();
+      foodX = 7; 
+      foodY = 4;
+      lcd.setLed(0, foodY, foodX, true);
       return;
     }
     if(page == 3 && !gaming && !gaming2 && !selectingDiff){
@@ -501,16 +513,18 @@ void down() {
   }
 }
 
-int foodX = 5;
-int foodY = 5;
-bool collision = false;
 
 void snake() {
+  if(!gaming2)
+  return; 
+
   if (millis() - lastMove > speed) {
     int tailX = x[0];
     int tailY = y[0];
 
     checkSnake();
+    if(!gaming2)
+    return; 
 
     if (x[length - 1] == foodX && y[length - 1] == foodY) {
       foodEaten = true;
@@ -556,8 +570,8 @@ void snake() {
   x[length - 1] += velX;
   y[length - 1] += velY;
     if (x[length - 1] > 7 || x[length - 1] < 0 || y[length - 1] > 7 || y[length - 1] < 0) {
-      lcd.clearDisplay(0);
       Quit();
+    
     }
     
   lcd.setLed(0, y[length - 1], x[length - 1], true);
